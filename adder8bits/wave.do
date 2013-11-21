@@ -11,8 +11,14 @@ add wave -noupdate -label {Carry Out} /adder8bits_tb/Adder8bits1/CarryOut
 add wave -noupdate -divider arch2
 add wave -noupdate -label Soma -radix unsigned /adder8bits_tb/Adder8bits2/soma
 add wave -noupdate -label {Carry Out} /adder8bits_tb/Adder8bits2/CarryOut
+add wave -noupdate -divider arch3
+add wave -noupdate -label Soma -radix unsigned /adder8bits_tb/Adder8bits3/soma
+add wave -noupdate -label {Carry Out} /adder8bits_tb/Adder8bits3/CarryOut
+add wave -noupdate -divider arch4
+add wave -noupdate -label Soma -radix unsigned /adder8bits_tb/Adder8bits4/soma
+add wave -noupdate -label {Carry Out} /adder8bits_tb/Adder8bits4/CarryOut
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {101 ps} 0}
+WaveRestoreCursors {{Cursor 1} {7833 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100

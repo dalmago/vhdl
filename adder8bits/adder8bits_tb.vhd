@@ -23,6 +23,20 @@ begin
     CarryIn => cin
   );
   
+  Adder8bits3: entity work.adder8bits(arch3)
+  port map(
+    A => ent1,
+    B => ent2,
+    CarryIn => cin
+  );
+  
+   Adder8bits4: entity work.adder8bits(arch4)
+  port map(
+    A => ent1,
+    B => ent2,
+    CarryIn => cin
+  );
+  
   ent1 <= ent1 + 1 after 10 ns;
   ent2 <= ent2 + 1 after 15 ns;
   cin <= '0', '1' after 35 ns;

@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 entity adder8bits is
   port(
@@ -14,7 +15,7 @@ end adder8bits;
 architecture arch1 of adder8bits is
   signal carrys : std_logic_vector (6 downto 0);
 begin
-  DUV7: entity work.fullAdder(arch2)
+  DUV7: entity work.fullAdder(arch2) --using random archs
   port map(
     A => A(7),
     B => B(7),
@@ -107,3 +108,26 @@ begin
   end generate;
 end arch2;
   
+architecture arch3 of adder8bits is
+  signal a_s, b_s, S : std_logic_vector (8 downto 0);
+begin
+  a_s <= '0' & A;
+  b_s <= '0' & B;
+  
+  S <= a_s + b_s + CarryIn;
+  
+  soma <= S(7 downto 0);
+  CarryOut <= S(8);
+  
+end arch3;  
+
+architecture arch4 of adder8bits is
+  signal S  :std_logic_vector (8 downto 0);
+begin
+  
+  S <= ('0' & A) + ('0' & B) + CarryIn;
+  
+  soma <= S(7 downto 0);
+  CarryOut <= S(8);
+  
+end arch4;
