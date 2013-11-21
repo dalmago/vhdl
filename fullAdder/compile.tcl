@@ -23,13 +23,13 @@ if { ![file exist work] } {
 
 # Source files listed in hierarchical order: botton -> top
 set sourceFiles {
-	FullAdder.vhd
-	FullAdder_tb.vhd
+	fullAdder.vhd
+	fullAdder_tb.vhd
 }
 
 
 
-set testBench FullAdder_tb(arch1)	
+set testBench fullAdder_tb(arch1)	
 
 
 
@@ -71,4 +71,4 @@ vsim $testBench
 set StdArithNoWarnings 1
 
 do wave.do
-run 200ns
+run 50ns
