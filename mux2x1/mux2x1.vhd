@@ -30,7 +30,4 @@ begin
       end if;
   end process;
 end arch2;
-    
-      
-    
-    
+
