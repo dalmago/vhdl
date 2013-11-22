@@ -1,7 +1,8 @@
 vhdl
 ====
 
-mux with 2 inputs and 1 output, ctrl signal of 1 bit and generic width to the data inputs and outputs.
+mux with 2 inputs and 1 outputs (of gereric wigth) and ctrl signal of 1 bit
+
 
 To compile and simulate, go to the folder in Modelsim and run:
 
