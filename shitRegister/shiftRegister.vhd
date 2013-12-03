@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_arith.CONV_STD_LOGIC_VECTOR;
 
 entity shiftRegister is
   generic (
@@ -25,7 +26,7 @@ begin
   process (clk, rst)
     begin
       if rst = '1' then
-        q_s <= CONV_LOGIC_VECTOR(INIT_VALUE, WIDTH);
+        q_s <= CONV_STD_LOGIC_VECTOR(INIT_VALUE, WIDTH);
       elsif rising_edge(clk) then
         if ctrl = "01" then
           q_s <= q_s(WIDTH-2 downto 0) & '0';

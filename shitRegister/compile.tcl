@@ -29,7 +29,7 @@ set sourceFiles {
 
 
 
-set testBench FullAdder_tb(arch1)	
+set testBench shiftRegister_tb(arch1)	
 
 
 
@@ -71,4 +71,4 @@ vsim $testBench
 set StdArithNoWarnings 1
 
 do wave.do
-run 200ns
+run 100ns
